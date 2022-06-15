@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "KxAApTwcJcPcmMxuruOpw2x0f6wXQJjnimIZ4ASTGh93KU5J5+d60406fYTw1B9PCuyDrLEkEIYZHeQB+OzRMA==",
+  "dgSpecHash": "mCYEG20fO+QFGS1pKyRW6FKG3fzQj/XblpULYL73Gl1ay52GxX2rRhWAL1WMa635TlY/2QuXkrK5OPkfyiwl0g==",
   "success": true,
   "projectFilePath": "D:\\tom\\PG\\source\\repos\\RazorPagesMovie\\RazorPagesMovie.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tom\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.abstractions.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.analyzers.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.design.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.relational.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.caching.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0-preview.5.22301.12\\microsoft.extensions.caching.memory.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.configuration.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0-preview.5.22301.12\\microsoft.extensions.dependencyinjection.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0-preview.5.22301.12\\microsoft.extensions.logging.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.logging.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.options\\7.0.0-preview.5.22301.12\\microsoft.extensions.options.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0-preview.5.22301.12\\microsoft.extensions.primitives.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\tom\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
