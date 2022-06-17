@@ -8,7 +8,9 @@ namespace RazorPagesMovie.Pages
     [IgnoreAntiforgeryToken]
     public class ErrorModel : PageModel
     {
+        #pragma warning disable CS8632 // '#nullable' 注釈コンテキスト内のコードでのみ、Null 許容参照型の注釈を使用する必要があります。
         public string? RequestId { get; set; }
+        #pragma warning restore CS8632 // '#nullable' 注釈コンテキスト内のコードでのみ、Null 許容参照型の注釈を使用する必要があります。
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
