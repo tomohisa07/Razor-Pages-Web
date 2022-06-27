@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RazorPagesMovie.Pages.Movies
 {
@@ -20,13 +21,38 @@ namespace RazorPagesMovie.Pages.Movies
         }
 
         public IList<Movie> Movie { get;set; } = default!;
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        public SelectList Genres { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string MovieGenre { get; set; }
 
         public async Task OnGetAsync()
         {
-            if (_context.Movie != null)
+            // DBから全てのジャンルを取得するLINQクエリ
+            IQueryable<string> genreQuery = from m in _context.Movie
+                                            orderby m.Genre
+                                            select m.Genre;
+
+            // ムービーを選択する LINQ クエリ
+            var movies = from m in _context.Movie
+                         select m;
+
+            // SearchString プロパティが null または 空でもない場合、
+            // 検索文字列で絞り込むようにムービークエリを変更
+            if (!string.IsNullOrEmpty(SearchString))
             {
-                Movie = await _context.Movie.ToListAsync();
+                movies = movies.Where(s => s.Title.Contains(SearchString));
             }
+
+            // MovieGenre プロパティが null または 空でもない場合、
+            // ジャンルで絞り込むようにムービークエリを変更
+            if (!string.IsNullOrEmpty(MovieGenre))
+            {
+                movies = movies.Where(x => x.Genre == MovieGenre);
+            }
+            Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
+            Movie = await movies.ToListAsync();
         }
     }
 }
