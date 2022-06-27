@@ -29,13 +29,29 @@ namespace RazorPagesMovie.Pages.Movies
 
         public async Task OnGetAsync()
         {
+            // DBから全てのジャンルを取得するLINQクエリ
+            IQueryable<string> genreQuery = from m in _context.Movie
+                                            orderby m.Genre
+                                            select m.Genre;
+
+            // ムービーを選択する LINQ クエリ
             var movies = from m in _context.Movie
                          select m;
+
+            // SearchString プロパティが null または 空でもない場合、
+            // 検索文字列で絞り込むようにムービークエリを変更
             if (!string.IsNullOrEmpty(SearchString))
             {
                 movies = movies.Where(s => s.Title.Contains(SearchString));
             }
 
+            // MovieGenre プロパティが null または 空でもない場合、
+            // ジャンルで絞り込むようにムービークエリを変更
+            if (!string.IsNullOrEmpty(MovieGenre))
+            {
+                movies = movies.Where(x => x.Genre == MovieGenre);
+            }
+            Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
             Movie = await movies.ToListAsync();
         }
     }
